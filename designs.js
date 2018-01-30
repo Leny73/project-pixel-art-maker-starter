@@ -20,4 +20,9 @@ $(".td").on("click", function() {
     const color = $("#colorPicker").val();
     $(this).css("background-color",color);
 });
+//Event listener on the button to clear the canvas
+$("#clearbutton").on("click",function(event){
+    event.preventDefault();
+    grid.children().remove();
+});
 }
