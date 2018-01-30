@@ -16,8 +16,7 @@ for(var r = 0 ; r<height; r++){
     }
 }
 //Event listener that colors the cells with specific color
-const td = $(".td");
-td.on("click", function() {
+$(".td").on("click", function() {
     const color = $("#colorPicker").val();
     $(this).css("background-color",color);
 });
