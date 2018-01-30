@@ -23,6 +23,12 @@ $(".td").on("click", function() {
 //Event listener on the button to clear the canvas
 $("#clearbutton").on("click",function(event){
     event.preventDefault();
-    grid.children().remove();
+    $(".td").css("background-color","#ffffff");
+});
+//Event listener on the button to clear the cell on double click
+$(".td").on("dblclick",function(event){
+    event.preventDefault()
+    $(this).css("background-color", "#ffffff");
 });
 }
+
