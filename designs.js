@@ -31,4 +31,18 @@ $(".td").on("dblclick",function(event){
     $(this).css("background-color", "#ffffff");
 });
 }
+//Function for saving image taken from http://www.codepool.biz/how-to-use-javascript-to-save-canvas-data-in-chrome.html
+function saveImage(){
+    var canvas = document.getElementById("#pixel_canvas");
+    document.location.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    var link = document.createElement("a");
+    link.download = "image.png";
+    link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    link.click();
+}
+//Event listener on the button to Download the image
+$("#downloadbutton").on("click",function(event){
+    event.preventDefault();
+    saveImage();
+});   
 
