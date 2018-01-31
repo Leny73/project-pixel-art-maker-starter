@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background: linear-gradient(blueviolet,blue,green,yellow,orange,red,brown);
 }
 
 h1 {
@@ -38,5 +39,6 @@ td {
 }
 
 input[type=number] {
-    width: 6em;
+    width: 6em; 
 }
+
